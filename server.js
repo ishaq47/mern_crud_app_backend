@@ -11,13 +11,12 @@ mongoose.connect('mongodb://127.0.0.1:27017/crudapp')
 })
 .catch(err => { 
     console.error(err);
-    process.exit(1);
 });
 //usermodel
 const UserSchema= new mongoose.Schema({
     name: {
         type: String,
-        required: false
+        required: true
     },
     email: {
         type: String,
